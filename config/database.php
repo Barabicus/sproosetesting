@@ -55,8 +55,8 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'port'      => 3306,
-            'database'  => 'octobercms',
+            'port'      => '',
+            'database'  => 'database',
             'username'  => 'root',
             'password'  => '',
             'charset'   => 'utf8',
@@ -116,7 +116,12 @@ return [
 
         'cluster' => false,
 
-        'default' => 'mysql',
+        'default' => [
+            'host'     => '127.0.0.1',
+            'password' => null,
+            'port'     => 6379,
+            'database' => 0,
+        ],
 
     ],
 

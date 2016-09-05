@@ -1,18 +1,5 @@
 description = "Default layout"
 ==
-<?php
-use Cms\Classes\Theme;
-use Cms\Classes\Page;
-
-function onStart(){
-
-$currentTheme = Theme::getEditTheme();
-$allPages = Page::listInTheme($currentTheme, true);
-    
-    $this['derps'] = $allPages;
-}
-?>
-==
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,15 +34,10 @@ $allPages = Page::listInTheme($currentTheme, true);
                         <a class="navbar-brand" href="{{ 'home'|page }}">October Demo</a>
                     </div>
                     <div class="collapse navbar-collapse navbar-main-collapse">
-                       <ul class="nav navbar-nav">
-                       <!--
-                            <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">1) Basic concepts</a></li>
-                            <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">1) AJAX framework</a></li>
-                            <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">1) Plugin components</a></li>
-                           --> 
-                        {% for derp in derps %}
-                        <li class="{% if this.page.id == derp.id %}active{% endif %}"><a href="{{derp.id|page}}">{{derp.title}}</a></li>
-                        {% endfor %}
+                        <ul class="nav navbar-nav">
+                            <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Basic concepts</a></li>
+                            <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">AJAX framework</a></li>
+                            <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Plugin components</a></li>
                         </ul>
                     </div>
                 </div>

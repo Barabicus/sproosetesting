@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost/octobercms/',
+    'url' => 'http://localhost',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'key' => 'CVAF8W1mlKs2IAA4OU0YZvg3cIlCLXi7',
+    'key' => 'CHANGE_ME!!!!!!!!!!!!!!!!!!!!!!!',
 
     'cipher' => 'AES-256-CBC',
 
